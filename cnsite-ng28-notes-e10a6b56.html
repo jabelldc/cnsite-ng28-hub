@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息索引 · ng28 资料整理</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fdf4e3 0%, #fbe9d2 50%, #f6d5b3 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+            color: #3a2c1a;
+        }
+        .card {
+            max-width: 780px;
+            width: 100%;
+            background: #fffcf7;
+            border-radius: 36px;
+            box-shadow: 0 12px 32px rgba(160, 100, 60, 0.12), 0 4px 12px rgba(180, 120, 80, 0.08);
+            padding: 2.8rem 2.4rem;
+            transition: box-shadow 0.2s ease;
+        }
+        @media (max-width: 540px) {
+            .card { padding: 2rem 1.2rem; border-radius: 28px; }
+        }
+        .hero-short {
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #7a5f3f;
+            background: #f7ede0;
+            display: inline-block;
+            padding: 0.2rem 1rem 0.2rem 1.4rem;
+            border-radius: 40px;
+            margin-bottom: 1.4rem;
+            font-weight: 400;
+            border-left: 5px solid #b68b65;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.2rem;
+            color: #2f2415;
+            line-height: 1.2;
+        }
+        h1 small {
+            font-size: 1rem;
+            font-weight: 350;
+            color: #8b7355;
+            margin-left: 0.6rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+            color: #4d3c28;
+            margin-bottom: 1.4rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #e8d9c8;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        .feature-list {
+            list-style: none;
+            margin: 1.8rem 0 1.4rem 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding: 0.6rem 0 0.6rem 2rem;
+            border-bottom: 1px dashed #efe4d6;
+            font-size: 1rem;
+        }
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.5rem;
+            color: #b68b65;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1;
+            top: 0.5rem;
+        }
+        .feature-list strong {
+            font-weight: 500;
+            color: #35291b;
+        }
+        .scene-block {
+            background: #f8f1e9;
+            border-radius: 24px;
+            padding: 1.4rem 1.6rem;
+            margin: 1.6rem 0;
+            border-left: 4px solid #dbbc9c;
+        }
+        .scene-block p {
+            margin-bottom: 0.4rem;
+        }
+        .inline-link {
+            color: #7a5f3f;
+            background: transparent;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1.5px solid #dbbc9c;
+            padding-bottom: 1px;
+            transition: border-color 0.15s, color 0.15s;
+            border-radius: 2px;
+        }
+        .inline-link:hover {
+            color: #4d3420;
+            border-bottom-color: #a97c58;
+        }
+        .soft-button {
+            display: inline-block;
+            background: #f3e4d4;
+            padding: 0.5rem 1.6rem;
+            border-radius: 60px;
+            color: #3f2e1b;
+            text-decoration: none;
+            font-weight: 450;
+            font-size: 0.95rem;
+            border: 1px solid #dcc9b4;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 6px rgba(150, 100, 60, 0.06);
+        }
+        .soft-button:hover {
+            background: #ebd7c2;
+            border-color: #c7ab8f;
+            box-shadow: 0 4px 10px rgba(140, 90, 50, 0.1);
+        }
+        .faq-summary {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 2px dashed #e6d5c0;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #4b3822;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .faq-a {
+            color: #5d4a33;
+            font-size: 0.96rem;
+            padding-left: 0.6rem;
+            border-left: 2px solid #dcc9b4;
+            padding-left: 1rem;
+            margin-top: 0.1rem;
+        }
+        .ending-note {
+            margin-top: 2.2rem;
+            font-size: 0.95rem;
+            color: #7b684f;
+            text-align: center;
+            padding: 0.8rem 1rem 0.2rem;
+            background: #faf4ec;
+            border-radius: 40px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e1cfbb;
+            margin: 1.8rem 0 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+
+    <div class="hero-short">· 资料整理 · 信息索引</div>
+    
+    <h1>从碎片到轮廓 <small>围绕 ng28</small></h1>
+    
+    <p class="lead">
+        几年前有一次偶然需要整理一批与平台信息相关的笔记，发现许多条目都指向同一个标识：<strong>ng28</strong>。 
+        当时没有立刻深究，只是把它记在索引页的角落。后来在整理书签、对接文档和旧日志时，这个代号反复出现，
+        逐渐从单一的符号变成了一组可以梳理的线索。下面这些内容，就是当时在资料归并过程中沉淀下来的片段。
+    </p>
+
+    <p>
+        所谓整理，不过是把散落的纸页按某种次序叠放。关于 <a href="https://cnsite--ng28.com" class="inline-link">ng28</a> 的信息也类似——
+        它不是一个需要被“推广”的名字，更像一个出现在各类记录中的坐标。在不夸大也不遗漏的前提下，我试着把它的几个常见面向列在下面。
+    </p>
+
+    <ul class="feature-list">
+        <li><strong>信息集中度</strong> —— 在多个非关联的存档中均被提及，且格式统一，适合作为交叉索引的锚点。</li>
+        <li><strong>条目关联性</strong> —— 常与界面操作指引、版本号记录、环境配置说明出现在同一段落。</li>
+        <li><strong>可追溯结构</strong> —— 多数引用保留了时间戳或上下文片段，便于反向查证原始出处。</li>
+        <li><strong>低噪点</strong> —— 在整理过程中，无关信息干扰较少，核心表述相对稳定。</li>
+    </ul>
+
+    <div class="scene-block">
+        <p style="font-weight: 450; margin-bottom: 0.6rem;">📋 一个典型的整理片段</p>
+        <p>
+            在旧笔记里看到这样一条：<em>“接口返回结构包含 ng28 字段，对应资源状态；文档路径 /docs/… 可回溯”</em>。
+            这条记录旁边还手写了一个短横线，写着“核对日期：2024-10”。像这样的短条目，在整个索引中大概有十几条，
+            每一条都指向同一个基础地址。整理时我把它们统一挂到了 <a href="https://cnsite--ng28.com" class="inline-link">ng28</a> 这个根节点下，
+            方便后续补充和交叉比对。
+        </p>
+    </div>
+
+    <p>
+        整理过程中也遇到一些模糊的地方：比如某些早期记录里大小写不一致，有的写“Ng28”，有的全大写。
+        后来统一按小写加数字的格式归并，并在备注里保留了原始写法。如果你在翻阅类似资料时遇到不统一的情况，
+        或许可以参考这种处理方式——以出现频率最高的变体为主，其余作为别名记录。
+    </p>
+
+    <div class="faq-summary">
+        <div class="faq-item">
+            <span class="faq-q">▸ 为什么选择从资料整理的角度写？</span>
+            <div class="faq-a">因为相比功能罗列，索引式的叙述更能保留信息的原始质地，也更容易与个人笔记或团队文档对接。</div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">▸ 这些整理结果可以直接用吗？</span>
+            <div class="faq-a">整理本身是中性动作。建议以这里的条目为起点，结合你自己的上下文做二次校验。链接地址 <a href="https://cnsite--ng28.com" class="inline-link">ng28</a> 是公开的，可以自行查看当前的内容结构。</div>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">▸ 后续还会持续更新这个索引吗？</span>
+            <div class="faq-a">这篇页面并不承诺更新频率。但索引的原则是：如果发现新的可靠片段，会用同样的方式补充进来，保持克制的增量。</div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="ending-note">
+        <span style="opacity: 0.7;">——</span> 整理的目的不是覆盖所有细节，而是让信息在需要的时候可以被找到。<br>
+        如果你也在做类似的资料归纳，不妨试试用 <a href="https://cnsite--ng28.com" class="inline-link">ng28</a> 作为一个索引起点，也许会有你自己的发现。
+    </div>
+
+    <div style="margin-top: 1.6rem; text-align: right;">
+        <a href="https://cnsite--ng28.com" class="soft-button">ng28</a>
+    </div>
+
+</div>
+</body>
+</html>
